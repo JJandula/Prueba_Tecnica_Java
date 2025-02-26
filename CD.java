@@ -47,8 +47,9 @@ public class CD extends memoria{
         "\nNombre: " + getNombre() 
         + "\nCapacidad Disponible: " + getCapacidad() 
         + "\nVelocidad de Giro: " + getVelGiro() + " RPM" 
-        + "\nContenido: " + getContenido())
-        + "\nContenido: " + getTiempoContenido();
+        + "\nContenido: " + getContenido()
+        + "\nContenido: " + getTiempoContenido()
+        + "\nTecnologia Lec-Esc: " + getTechLecEsc());
     }
     
 

@@ -39,7 +39,8 @@ public class DiscoDuro extends memoria{
         + "\nCapacidad Disponible: " + getCapacidad() 
         + "\nVelocidad de Giro: " + getVelGiro() + " RPM" 
         + "\nContenido: " + getContenido()
-        + "\nParticiones: " + getParticiones());
+        + "\nParticiones: " + getParticiones()
+        + "\nTecnologia Lec-Esc: " + getTechLecEsc());
     }
 
     
@@ -54,27 +55,26 @@ public class DiscoDuro extends memoria{
     public void girar(){
         System.out.println("===================================");
         System.out.println("\n" + getTipo() + " girando...\n");
-        System.out.println("===================================");
-        System.out.println("\n");
+        System.out.println("===================================\n");
     }
 
     @Override
     public void formatear(){
+        System.out.println("\n\nFORMATEANDO: " + getTipo() + "...");
         System.out.println("===================================");
-        System.out.println("\nFORMATEANDO: " + getTipo() + "...");
         setCapacidad("1TB");
         setContenido("FORMATEADO");
         setParticiones(0);
+        System.out.println("\nFORMATEADO ✅");
         System.out.println("\nCapacidad disponible: " + getCapacidad() + "\n");
-        System.out.println("FORMATEADO ✅\n");
+        System.out.println("Numero particiones: " + getParticiones() + "\n");
         System.out.println("===================================");
     }
 
     @Override
     public void cambiarNombre(){
-        System.out.println("\n");
+        System.out.println("\n\nCAMBIANDO NOMBRE DEL: " + getTipo() + "...");
         System.out.println("===================================");
-        System.out.println("\nCAMBIANDO NOMBRE DEL: " + getTipo() + "...");
         setNombre("HDD de Erik");
         System.out.println("\nNUEVO NOMBRE: " + getNombre() + "\n");
         System.out.println("===================================");
