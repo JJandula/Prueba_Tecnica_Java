@@ -69,13 +69,13 @@
     /* METODOS DE LA CLASE */
 
 
-    public String getInfo() {
+    /* public String getInfo() {
         return ("Tipo de Dispositivo: " + getTipo() + 
         "\nNombre: " + getNombre() 
         + "\nCapacidad Disponible: " + getCapacidad() 
         + "\nVelocidad de Giro: " + getVelGiro() + " RPM" 
         + "\nContenido: " + getContenido());
-    }
+    } */
     
 
    

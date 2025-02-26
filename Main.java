@@ -13,7 +13,11 @@ public class Main{
         for (int i = 0; i < misDevices.length; i++) {
 
             switch (misDevices[i]) {
-                case CD cd -> System.out.println("INFO:\n" + cd.getInfo() + "\n");
+                case CD cd -> {
+                    System.out.println("INFO:\n" + cd.getInfo() + "\n");
+                    ( (CD) misDevices[i]).quemar();
+                    System.out.println("INFO:\n" + cd.getInfo() + "\n");
+                }
                 case DiscoDuro discoDuro -> {
                     System.out.println("INFO:\n" + discoDuro.getInfo() + "\n");
                     System.out.println("\n");
@@ -33,46 +37,3 @@ public class Main{
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-        /* System.out.println("INFO: " + ( (CD) misDevices[i]).getInfo()); */
-
-        
-
-/*         for (memoria memory : misDevices) {
-           switch (memory.getTipo().getSimpleName()){
-               case "CD":
-                   System.out.println(memory.toString());
-                   break;
-               case "DiscoDuro":
-                   System.out.println(memory.toString());
-                   break;
-               default:
-                   System.out.println("Desconocido");
-            }
-        }
-
-    }
-
-}
-
-
-for (memoria memory : misDevices) {
-    if (memory != null) {  // Evita NullPointerException
-        switch (memory.getTipo()) {
-            case "CD":
-            case "DiscoDuro":
-                System.out.println(DiscoDuro.getInfo());
-                break;
-            default:
-                System.out.println("Desconocido");
-        } */

@@ -9,6 +9,21 @@ public class DiscoDuro extends memoria{
     }   
 
    
+    /* GETTERS */
+
+
+
+
+    /* METODOS PROPIOS DE LA CLASE */
+
+    public String getInfo() {
+        return ("Tipo de Dispositivo: " + getTipo() + 
+        "\nNombre: " + getNombre() 
+        + "\nCapacidad Disponible: " + getCapacidad() 
+        + "\nVelocidad de Giro: " + getVelGiro() + " RPM" 
+        + "\nContenido: " + getContenido());
+    }
+
     
     public void tipoLecEsc() {
         System.out.println("Mi tecnologia para Lectura y Escritura es: " + techLecEsc);
