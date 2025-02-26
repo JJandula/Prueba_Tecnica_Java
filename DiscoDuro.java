@@ -11,7 +11,24 @@ public class DiscoDuro extends memoria{
    
     /* GETTERS */
 
+    public int getParticiones() {
+        return particiones;
+    }
 
+    public String getTechLecEsc() {
+        return techLecEsc;
+    }
+
+
+    /* SETTERS */
+
+    public void setParticiones(int particiones) {
+        this.particiones = particiones;
+    }
+
+    public void setTechLecEsc(String techLecEsc) {
+        this.techLecEsc = techLecEsc;
+    }
 
 
     /* METODOS PROPIOS DE LA CLASE */
@@ -21,39 +38,45 @@ public class DiscoDuro extends memoria{
         "\nNombre: " + getNombre() 
         + "\nCapacidad Disponible: " + getCapacidad() 
         + "\nVelocidad de Giro: " + getVelGiro() + " RPM" 
-        + "\nContenido: " + getContenido());
+        + "\nContenido: " + getContenido()
+        + "\nParticiones: " + getParticiones());
     }
 
     
     public void tipoLecEsc() {
         System.out.println("Mi tecnologia para Lectura y Escritura es: " + techLecEsc);
     }
+
+
+    /* METODOS ABSTRACTOS */
     
     @Override
     public void girar(){
-        System.out.println(getTipo() + " girando...");
+        System.out.println("===================================");
+        System.out.println("\n" + getTipo() + " girando...\n");
         System.out.println("===================================");
         System.out.println("\n");
     }
 
     @Override
     public void formatear(){
-        System.out.println("FORMATEANDO: " + getTipo() + "...");
         System.out.println("===================================");
-        setCapacidad(" 1TB");
-        System.out.println("Capacidad disponible:" + getCapacidad());
+        System.out.println("\nFORMATEANDO: " + getTipo() + "...");
+        setCapacidad("1TB");
         setContenido("FORMATEADO");
-        System.out.println("FORMATEADO ✅");
+        setParticiones(0);
+        System.out.println("\nCapacidad disponible: " + getCapacidad() + "\n");
+        System.out.println("FORMATEADO ✅\n");
         System.out.println("===================================");
     }
 
     @Override
     public void cambiarNombre(){
         System.out.println("\n");
-        System.out.println("CAMBIANDO NOMBRE DEL: " + getTipo() + "...");
         System.out.println("===================================");
+        System.out.println("\nCAMBIANDO NOMBRE DEL: " + getTipo() + "...");
         setNombre("HDD de Erik");
-        System.out.println("NUEVO NOMBRE: " + getNombre());
+        System.out.println("\nNUEVO NOMBRE: " + getNombre() + "\n");
         System.out.println("===================================");
     } 
 }
