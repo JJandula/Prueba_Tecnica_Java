@@ -1,19 +1,23 @@
- abstract public class memoria {
+package Prueba_Tecnica_Java;
+
+ abstract public class memoria{
     private String nombre;
     private String tipo;
     private int velGiro;
-    private String capacidad;
+    private int capacidad;
+    private int capacidadRest;
     private String contenido;
 
 
 
     /* CONSTRUCTOR MEMORIA */
 
-    public memoria(String nombre, String tipo, int velGiro, String capacidad, String contenido) {
+    public memoria(String nombre, String tipo, int velGiro, int capacidad, int capacidadRest, String contenido) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.velGiro = velGiro;
         this.capacidad = capacidad;
+        this.capacidadRest = capacidadRest;
         this.contenido = contenido;
     }
 
@@ -32,12 +36,16 @@
         return velGiro;
     }
 
-    public String getCapacidad() {
+    public int getCapacidad() {
         return capacidad;
     }
 
     public String getContenido() {
         return contenido;
+    }
+
+    public int getCapacidadRest() {
+        return capacidadRest;
     }
 
 
@@ -56,7 +64,7 @@
         this.velGiro = velGiro;
     }
     
-    public void setCapacidad(String capacidad) {
+    public void setCapacidad(int capacidad) {
         this.capacidad = capacidad;
     }
 
@@ -64,32 +72,20 @@
         this.contenido = contenido;
     }
 
+    public void setCapacidadRest(int capacidadRest) {
+        this.capacidadRest = capacidadRest;
+    }
 
-
-    /* METODOS DE LA CLASE */
-
-
-    /* public String getInfo() {
-        return ("Tipo de Dispositivo: " + getTipo() + 
-        "\nNombre: " + getNombre() 
-        + "\nCapacidad Disponible: " + getCapacidad() 
-        + "\nVelocidad de Giro: " + getVelGiro() + " RPM" 
-        + "\nContenido: " + getContenido());
-    } */
-    
 
    
 
     /* METODOS ABSTRACTOS */
 
+    abstract String getInfo();
 
-    abstract void girar();
-
-    abstract  void cambiarNombre();
+    abstract void cambiarNombre();
     
     abstract void formatear();
     
 
 }
-
- 

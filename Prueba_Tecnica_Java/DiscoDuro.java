@@ -1,9 +1,11 @@
-public class DiscoDuro extends memoria{
+package Prueba_Tecnica_Java;
+
+public class DiscoDuro extends memoria implements Girar{
     int particiones;
     String techLecEsc;
 
-    public DiscoDuro(String nombre, String tipo, int velGiro, String capacidad, String contenido, int particiones) {
-        super(nombre, tipo, velGiro, capacidad, contenido);
+    public DiscoDuro(String nombre, String tipo, int velGiro, int capacidad, int capacidadRest, String contenido, int particiones) {
+        super(nombre, tipo, velGiro, capacidad, capacidadRest, contenido);
         this.particiones = particiones;
         this.techLecEsc = "Cabezal Magnetico";
     }   
@@ -33,15 +35,7 @@ public class DiscoDuro extends memoria{
 
     /* METODOS PROPIOS DE LA CLASE */
 
-    public String getInfo() {
-        return ("Tipo de Dispositivo: " + getTipo() + 
-        "\nNombre: " + getNombre() 
-        + "\nCapacidad Disponible: " + getCapacidad() 
-        + "\nVelocidad de Giro: " + getVelGiro() + " RPM" 
-        + "\nContenido: " + getContenido()
-        + "\nParticiones: " + getParticiones()
-        + "\nTecnologia Lec-Esc: " + getTechLecEsc());
-    }
+    
 
     
     public void tipoLecEsc() {
@@ -50,33 +44,50 @@ public class DiscoDuro extends memoria{
 
 
     /* METODOS ABSTRACTOS */
-    
+
     @Override
-    public void girar(){
-        System.out.println("===================================");
-        System.out.println("\n" + getTipo() + " girando...\n");
-        System.out.println("===================================\n");
+    String getInfo(){
+        return ("Tipo de Dispositivo: " + getTipo() + 
+        "\nNombre: " + getNombre() 
+        + "\nCapacidad Total: " + getCapacidad() + " GB"
+        + "\nCapacidad Disponible: " + getCapacidadRest() + " GB"
+        + "\nVelocidad de Giro: " + getVelGiro() + " RPM" 
+        + "\nContenido: " + getContenido()
+        + "\nParticiones: " + getParticiones()
+        + "\nTecnologia Lec-Esc: " + getTechLecEsc());
     }
 
     @Override
-    public void formatear(){
+    void formatear(){
         System.out.println("\n\nFORMATEANDO: " + getTipo() + "...");
         System.out.println("===================================");
-        setCapacidad("1TB");
+        setCapacidadRest(1000);
         setContenido("FORMATEADO");
         setParticiones(0);
         System.out.println("\nFORMATEADO ✅");
-        System.out.println("\nCapacidad disponible: " + getCapacidad() + "\n");
+        System.out.println("\nCapacidad disponible: " + getCapacidad() + " GB\n");
         System.out.println("Numero particiones: " + getParticiones() + "\n");
         System.out.println("===================================");
     }
 
     @Override
-    public void cambiarNombre(){
-        System.out.println("\n\nCAMBIANDO NOMBRE DEL: " + getTipo() + "...");
+    void cambiarNombre(){
+        System.out.println("\n\nCAMBIANDO NOMBRE DE: " + getTipo() + "...");
         System.out.println("===================================");
         setNombre("HDD de Erik");
         System.out.println("\nNUEVO NOMBRE: " + getNombre() + "\n");
         System.out.println("===================================");
     } 
+
+
+
+    /* METODOS DE INTERFAZ */
+
+    @Override
+    public void girar() {
+        System.out.println("===================================");
+        System.out.println("\nDisco duro girando... \n");
+        System.out.println("===================================");
+    }
+
 }
