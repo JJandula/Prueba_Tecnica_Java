@@ -70,21 +70,3 @@ public class Main {
         }
 
     }
-
-
-    /* 
-   
-    - ¿Qué pasa con las ruedas y los frisbees? También son discos giratorios, pero no se utilizan para el
-    almacenamiento de datos. ¿Cómo entrarían en este modelo de clases? 
-    
-    CREAMOS Giratorio.java 
-
-    HECHO:
-     - ¿Si tienes clases de las que heredas se aplicarían a LP y BlueRay? Si es así, extiende las nuevas clases. Si
-        no es así, ¿deberías modificarla o ampliar una clase abstracta diferente?
-    - Los CD y discos duros no son los únicos medios planos y circulares que se han utilizado para almacenar y devolver datos.
-    - Añade una clase para discos de vinilo (LP) y otra para blueRay.
-    - Cambiar capacidad y capacidadRestde String a int.
-    - Añadir interfaz giratorio.
-
-    */
