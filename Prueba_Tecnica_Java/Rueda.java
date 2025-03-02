@@ -85,6 +85,8 @@ public class Rueda extends giratorio implements Girar{
     void instalarRueda(){
     }
 
+    /* METODOS NO UTILIZADOS */
+
     @Override
     void lanzar(){
     }
