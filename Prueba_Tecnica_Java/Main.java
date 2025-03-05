@@ -57,9 +57,16 @@ public class Main {
             switch (misGiratorios[i]) {
                 case Rueda Rueda -> {
                     System.out.println("INFO:\n" + Rueda.getInfo() + "\n");
+                    ( (Rueda) misGiratorios[i]).instalarRueda();
+                    ( (Rueda) misGiratorios[i]).inflar();
+                    ( (Rueda) misGiratorios[i]).limpiar();
+                    ( (Rueda) misGiratorios[i]).girar();
                 }
                 case Frisbees Frisbees -> {
                     System.out.println("INFO:\n" + Frisbees.getInfo() + "\n");
+                    ( (Frisbees) misGiratorios[i]).lanzar();
+                    ( (Frisbees) misGiratorios[i]).recoger();
+                    ( (Frisbees) misGiratorios[i]).limpiar();
                 }
                 default -> {
                     System.out.println("Error, Giratorio no encontrado");

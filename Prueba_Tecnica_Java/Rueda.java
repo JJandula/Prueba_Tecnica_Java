@@ -75,14 +75,26 @@ public class Rueda extends giratorio implements Girar{
 
    @Override
     void limpiar(){
+        System.out.println("===================================");
+        System.out.println("LIMPIANDO " + getTipo()+ "......");
+        System.out.println(getTipo() + " limpia!");
+        System.out.println("===================================");
     }
 
     @Override
     void inflar(){
+        System.out.println("===================================");
+        System.out.println("Inflando + " + getTipo() + "......");
+        System.out.println(getTipo() + " inflada correctamente!");
+        System.out.println("===================================");
     }
 
     @Override
     void instalarRueda(){
+        System.out.println("===================================");
+        System.out.println("Instalando " + getTipo() + "......");
+        System.out.println(getTipo() + " instalada y lista para usar!");
+        System.out.println("===================================");
     }
 
     /* METODOS NO UTILIZADOS */
@@ -93,6 +105,8 @@ public class Rueda extends giratorio implements Girar{
 
     @Override
     void recoger(){
+    }
+    void cambiarNombre(){
     }
 
     /* METODOS DE INTERFAZ */

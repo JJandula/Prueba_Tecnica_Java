@@ -21,14 +21,7 @@ public class Frisbees extends giratorio implements Girar{
     public void setPeso(int peso) {
         this.peso = peso;
     }
-
-
-    /* METODOS PROPIOS DE LA CLASE */
-
     
-    public void tipoLecEsc() {
-        System.out.println("Mi tecnologia para Lectura y Escritura es: ");
-    }
 
 
     /* METODOS ABSTRACTOS */
@@ -47,23 +40,30 @@ public class Frisbees extends giratorio implements Girar{
     
     @Override
     void limpiar(){
+        System.out.println("\n===================================\n");
         System.out.println("Fribee Limpio!");
+        System.out.println("\n===================================\n");
     }
 
     @Override
     void lanzar(){
+        System.out.println("\n===================================\n");
         System.out.println("Fribee lanzado!");
+        System.out.println("\n===================================\n");
     }
 
     @Override
     void recoger(){
+        System.out.println("\n===================================\n");
         System.out.println("Fribee recogido!");
+        System.out.println("\n===================================\n");
     }
 
     /* METODOS NO UTILIZADOS */
 
     @Override
     void cambiarNombre(){
+
     }
 
     @Override
@@ -73,7 +73,6 @@ public class Frisbees extends giratorio implements Girar{
     @Override
     void instalarRueda(){
     }
-    
 
 
 
